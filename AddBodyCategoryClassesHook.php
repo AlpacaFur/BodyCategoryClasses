@@ -1,7 +1,5 @@
 <?php
-use MediaWiki\Output\Hook\BeforePageDisplayHook;
-
-class AddBodyCategoryClassesHook implements BeforePageDisplayHook {
+class AddBodyCategoryClassesHook {
   public function onBeforePageDisplay($out, $skin): void {
     global $wgBodyCategoryClassesCategoryAllowList;
     global $wgBodyCategoryClassesCategoryUseAllowList;
