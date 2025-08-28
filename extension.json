@@ -1,0 +1,36 @@
+{
+  "name": "Body Category Classes",
+  "version": "0.1.0",
+  "author": ["AlpacaFur/Luke Taylor"],
+  "url": "TBD",
+  "descriptionmsg": "bodycategoryclasses-desc",
+  "license-name": "MIT",
+  "type": "other",
+  "requires": {
+    "MediaWiki": ">= 1.40.0"
+  },
+  "MessagesDirs": {
+    "AddBodyCategoryClassesHook": ["i18n"]
+  },
+  "AutoloadClasses": {
+    "AddBodyCategoryClassesHook": "AddBodyCategoryClassesHook.php"
+  },
+  "HookHandlers": {
+    "main": {
+      "class": "AddBodyCategoryClassesHook",
+      "services": []
+    }
+  },
+  "Hooks": {
+    "BeforePageDisplay": "main"
+  },
+  "config": {
+    "BodyCategoryClassesCategoryAllowList": {
+      "value": []
+    },
+    "BodyCategoryClassesCategoryUseAllowList": {
+      "value": false
+    }
+  },
+  "manifest_version": 2
+}

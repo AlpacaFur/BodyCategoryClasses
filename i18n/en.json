@@ -1,0 +1,6 @@
+{
+  "@metadata": {
+    "authors": ["Luke Taylor"]
+  },
+  "bodycategoryclasses-desc": "Add classes for non-hidden categories to the page body tag."
+}
