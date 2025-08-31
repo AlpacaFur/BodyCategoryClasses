@@ -1,5 +1,7 @@
 <?php
-class AddBodyCategoryClassesHook {
+use MediaWiki\Hook\BeforePageDisplayHook;
+
+class AddBodyCategoryClassesHook implements BeforePageDisplayHook {
   public function __construct(private readonly Config $config,) {}
 
   public function onBeforePageDisplay($out, $skin): void {
@@ -18,8 +20,6 @@ class AddBodyCategoryClassesHook {
 
     // Escape as HTML class + add 'mw-x-category-' prefix
     $escaped_categories = array_map(fn($category): string => 'mw-x-category-' . Sanitizer::escapeClass($category), $allowed_categories);
-
-
 
     // Add classes to output
     $out->addBodyClasses($escaped_categories);
