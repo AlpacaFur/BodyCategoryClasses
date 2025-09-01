@@ -1,12 +1,13 @@
 <?php
+namespace BodyCategoryClasses;
 use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Parser\Sanitizer;
 
-class AddBodyCategoryClassesHook implements BeforePageDisplayHook {
-  public function __construct(private readonly Config $config,) {}
-
+class Hooks implements BeforePageDisplayHook {
   public function onBeforePageDisplay($out, $skin): void {
-    $allowlist = $this->config->get("BodyCategoryClassesCategoryAllowList");
-    $useAllowlist = $this->config->get("BodyCategoryClassesCategoryUseAllowList");
+    $config = $out->getConfig();
+    $allowlist = $config->get("BodyCategoryClassesCategoryAllowList");
+    $useAllowlist = $config->get("BodyCategoryClassesCategoryUseAllowList");
 
     // Get all non-hidden categories
     $categories = $out->getCategories('normal');

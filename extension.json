@@ -7,18 +7,15 @@
   "license-name": "MIT",
   "type": "other",
   "requires": {
-    "MediaWiki": ">= 1.40.0"
+    "MediaWiki": ">= 1.41.0"
   },
-  "MessagesDirs": {
-    "AddBodyCategoryClassesHook": ["i18n"]
-  },
-  "AutoloadClasses": {
-    "AddBodyCategoryClassesHook": "AddBodyCategoryClassesHook.php"
+  "AutoloadNamespaces": {
+    "BodyCategoryClasses\\": "includes/"
   },
   "HookHandlers": {
     "main": {
-      "class": "AddBodyCategoryClassesHook",
-      "services": ["MainConfig"]
+      "class": "BodyCategoryClasses\\Hooks",
+      "services": []
     }
   },
   "Hooks": {
