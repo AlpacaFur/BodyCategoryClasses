@@ -12,6 +12,9 @@
   "AutoloadNamespaces": {
     "BodyCategoryClasses\\": "src/"
   },
+  "MessagesDirs": {
+    "BodyCategoryClasses": ["i18n"]
+  },
   "HookHandlers": {
     "main": {
       "class": "BodyCategoryClasses\\Hooks",
